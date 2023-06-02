@@ -4,8 +4,9 @@ import AddData from "./AddData";
 
 export default function DataList({ data, addData, deleteData }) {
   return (
-    <div>
+    <div className="datalist">
       {data &&
+        data.length > 0 &&
         data.map((item) => {
           return (
             <Single

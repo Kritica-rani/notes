@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
-export default function Header({ name, age, setAge }) {
-  //   const { name } = props;
-  const [fav, setFav] = useState("coffee");
-
+export default function Header({ setDarkMode }) {
   return (
-    <div>
-      <h1>Hii this header</h1>
-      The name :{name}
-      <button onClick={() => setAge(30)}>Update Age</button>
-      Age:{age}
+    <div className="search">
+      <h1>My WishList</h1>
+      <button onClick={() => setDarkMode((prevState) => !prevState)}>
+        Change background
+      </button>
     </div>
   );
 }

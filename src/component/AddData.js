@@ -6,13 +6,16 @@ export default function AddData({ addData }) {
     setNoteText(e.target.value);
   };
   const handleSave = () => {
-    addData(noteText);
-    setNoteText("");
+    if (noteText.length > 0) {
+      addData(noteText);
+      setNoteText("");
+    } else {
+      alert("Please write somethin !!!");
+    }
   };
- 
 
   return (
-    <div className="note">
+    <div className="single new">
       <textarea
         rows={10}
         cols={10}
